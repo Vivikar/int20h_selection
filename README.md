@@ -5,7 +5,9 @@
 
 Analysing sources like https://paperswithcode.com/task/instance-segmentation and looking into specifics of each State of The Art (STA) models we've concluded:
 -  *Mask R-CNN* is the easiest and quickest one to train
-- despite its age, it's still considered as on of the STA approaches with one of the highest scores img1, img2
+- despite its age, it's still considered as on of the STA approaches with one of the highest scores
+![COCO minival](https://github.com/Vivikar/int20th_selection/blob/master/coco_minival.png)
+![COCO test-dev](https://github.com/Vivikar/int20th_selection/blob/master/coco_test_dev.png)
 - it fits into kaggle kernels and its training and validating takes ~~a bit less than eternity~~ a relatively small amount of time, so we can fit into the task deadline
 - we've had previous experience working with it
 
