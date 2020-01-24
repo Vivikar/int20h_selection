@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+data/
+weights/
+Mask_RCNN/
+fashion20200123T1149/
