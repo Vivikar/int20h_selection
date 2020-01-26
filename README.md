@@ -1,4 +1,5 @@
 # iMaterialist (Fashion) 2019 Competition solution developed by "Гиперболические ИПСоиды" team for the INT20TH Hackathon selection
+The jupyter notebook version can be viewed [here ](https://github.com/Vivikar/int20th_selection/blob/master/iMaterialist_INT20TH.ipynb) and the html version [here](https://github.com/Vivikar/int20th_selection/blob/master/iMaterialist_INT20TH.html)
 
 ## Model selection
 #### Among many models available today for instance segmentation we've chosen simple **Mask R-CNN** with a Resnet 50 backbone.
