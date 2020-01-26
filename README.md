@@ -22,15 +22,16 @@ ContrastNormalization((
 Crop(percent=(0, 0.1)), # random crops
 arithmetic.JpegCompression((80, 90))
 ```
+For the first 7 epochs, we've trained all the layers of our model, and for the last 3, we've trained only the top part. This allowed us to use as much information as we could from weights from COCO dataset meanwhile paying more attention to the top part of the model, which actually responds for ROI detection and creating masks. However, we thought that training at least for a bit the whole model will help us to improve the quality of the CNN responsible for feature detection to make it better suited for this data.
 ## Results
-
+Despite training for only 10 epochs and relatively simple pipeline we've managed to achieve a result of **0.0082**. It's the result of the model trained after 10th epoch. Since our train AND validation loss kept decreasing and were the lowest on 10th epoch we've chosen to use it as our final checkpoint. However, we are quite sure that if we were to continue training, we would achieve much better result since the model was still underfitting a bit. 
 ## Problems we've encountered
-A very samll amount of time given to solve this task. Taking into account a massive dataset and gigantic models required to achive any acceptable results, working locally wasn't an option. Other free platforms like Google Colab or Kaggle Kernels had multiple restrictions and their efficency still wasn't enough to try all the models and approaches.
+A very samll amount of time given to solve this task. Taking into account a massive dataset and gigantic models required to achive any acceptable results, working locally wasn't an option.Free platforms like Google Colab or Kaggle Kernels had multiple restrictions and their efficency still wasn't enough to try all the models and approaches.
 So time and resource limitations were our main problems.
 ## Ways to improve
 - do more epochs
-- tune training parameters to get a better model
+- tune training parameters 
 -  use the fact that the position of the clothing item is related to a specific body part (use another model to detect body parts)
 - try other backbones like Feature Pyramid Network (FPN) or a ResNet101
 - test other models and architectures (like *Hybrid Task Cascade with ResNeXt-101-64x4d-FPN backbone*)
-- ensemble best different models
+- ensemble best different models AND (OR) their predictions
